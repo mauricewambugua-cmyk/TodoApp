@@ -1,0 +1,13 @@
+{% extends 'todoapp/base.html' %}
+{% block title %}Add Category{% endblock %}
+
+{% block content %}
+<div class="form">
+    <h2>Add New Category</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn">Create Category</button>
+    </form>
+</div>
+{% endblock %}

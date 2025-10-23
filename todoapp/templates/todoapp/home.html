@@ -1,0 +1,73 @@
+{% extends "todoapp/base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<div class="container">
+    <div class="w3-panel">
+        <h2>My Tasks</h2>
+        <a href="{% url 'addtodo' %}" class="btn">
+            <i class="fa fa-plus"></i> Add New Task
+        </a>
+    </div>
+
+    {% if todos %}
+        {% for todo in todos %}
+        <div class="card">
+            <div class="w3-row">
+                <div class="w3-col m8">
+                    <h3>{{ todo.title }}</h3>
+                    <p>{{ todo.description }}</p>
+                    
+                    <div class="w3-row">
+                        <div class="w3-col s4">
+                            <strong>Category:</strong> 
+                            {% if todo.category %}
+                                {{ todo.category.name }}
+                            {% else %}
+                                No Category
+                            {% endif %}
+                        </div>
+                        <div class="w3-col s4">
+                            <strong>Status:</strong> {{ todo.get_status_display }}
+                        </div>
+                        <div class="w3-col s4">
+                            <strong>Priority:</strong> {{ todo.get_priority_display }}
+                        </div>
+                    </div>
+
+                    {% if todo.is_important %}
+                    <div class="w3-panel w3-pale-red">
+                        <p>⚠️ Important Task</p>
+                    </div>
+                    {% endif %}
+
+                    <div class="w3-text-grey">
+                        <small>Created: {{ todo.created_on|date:"F j, Y" }}</small>
+                        {% if todo.updated_on != todo.created_on %}
+                        <br><small>Updated: {{ todo.updated_on|date:"F j, Y" }}</small>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="w3-col m4 w3-center">
+                    <div class="w3-bar-block">
+                        <a href="{% url 'delete' todo.pk %}" class="btn btn--ghost w3-margin-bottom">
+                            Delete Task
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <div class="w3-panel w3-pale-yellow">
+            <h3>No tasks yet!</h3>
+            <p>Click the "Add New Task" button to create your first task.</p>
+        </div>
+    {% endif %}
+</div>
+{% endif %}
+{% endblock %}

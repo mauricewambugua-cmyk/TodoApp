@@ -1,0 +1,16 @@
+{% extends "todoapp/base.html" %}
+{% load static %}
+ 
+
+{% block title %} Delete{% endblock %}
+
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+
+    
+    <button type="submit" >DELETE</button>
+
+</form>
+        
+{% endblock %}

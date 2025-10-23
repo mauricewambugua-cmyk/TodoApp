@@ -1,0 +1,238 @@
+.card {
+  background: #cdf5d1;               
+  border: 1px solid #acf1ac;          
+  border-radius: 8px;          
+  padding: 15px;                  
+  margin: 10px auto;               
+  width: calc(100% - 20px);                
+  box-shadow: 0 2px 5px rgba(192, 245, 139, 0.1);
+  overflow: hidden; 
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 700px;
+  }
+}
+
+/* Navigation Bar Styles */
+.w3-bar {
+  padding: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.w3-bar .w3-bar-item {
+  padding: 12px 16px;
+  width: auto;
+  display: inline-block;
+  color: white !important;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .w3-bar {
+    padding: 8px 16px;
+    overflow-x: visible;
+    white-space: normal;
+  }
+  
+  .w3-bar .w3-bar-item {
+    font-size: 16px;
+  }
+}
+
+.w3-bar .w3-button {
+  background: none;
+  color: white !important;
+  cursor: pointer;
+  border: none;
+}
+
+.w3-bar .w3-button:hover {
+  background-color: #444 !important;
+}
+
+/* Regular links outside navbar */
+a {
+  color: black;                    
+  text-decoration: none;             
+}
+
+body {
+  background: #e2f7de;            
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+}
+
+.container {
+  padding: 10px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 20px;
+    max-width: 1200px;
+  }
+}
+
+
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white !important;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 5px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.btn--ghost {
+    background-color: transparent;
+    border: 1px solid #dc3545;
+    color: #dc3545 !important;
+}
+
+.btn--ghost:hover {
+    background-color: #dc3545;
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(220,53,69,0.2);
+}
+
+
+    .form {
+    background: #cdf5d1;               
+    border: 1px solid #acf1ac;          
+    border-radius: 8px;          
+    padding: 15px;                  
+    margin: 10px auto;               
+    width: calc(100% - 20px);                
+    box-shadow: 0 2px 5px rgba(192, 245, 139, 0.1);
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) {
+    .form {
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 700px;
+    }
+}
+
+.form h2 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 16px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    appearance: none;
+    margin-bottom: 8px;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.w3-check {
+    margin-top: 12px;
+    width: 20px;
+    height: 20px;
+}
+
+.text-muted {
+    color: #666;
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85rem;
+}
+
+.btn-sm {
+    padding: 8px 12px;
+    font-size: 14px;
+    min-height: 44px;
+}
+
+@media screen and (min-width: 768px) {
+    .form h2 {
+        font-size: 1.8rem;
+    }
+    
+    .form-group label {
+        font-size: 1rem;
+    }
+    
+    .btn-sm {
+        padding: 4px 8px;
+        font-size: 12px;
+        min-height: auto;
+    }
+}
+ul.errorlist {
+    display: none;
+}
+
+    
+    .input {
+      background-color: #f8f1f1;
+      border: 1px solid #f3f4f5;
+      border-radius: var(--radius);
+      color: #e7e9ea;
+      padding: 0.7rem 0.9rem;
+      margin: 20px 0px 10px 0px;
+      font-size: 1rem;
+    }
+label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: var(--muted);
+  padding: 10px 0 5px;
+}
+
+
+   

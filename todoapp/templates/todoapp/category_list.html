@@ -1,0 +1,19 @@
+{% extends 'todoapp/base.html' %}
+{% block title %}Categories{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h2>Your Categories</h2>
+    <a href="{% url 'add-category' %}" class="btn">Add New Category</a>
+    
+    {% if categories %}
+    <ul class="list-group mt-3">
+        {% for category in categories %}
+        <li class="list-group-item">{{ category.name }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No categories yet. Create one to get started!</p>
+    {% endif %}
+</div>
+{% endblock %}
